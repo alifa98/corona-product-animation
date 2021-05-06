@@ -1,5 +1,4 @@
 from manim import *
-import networkx.generators.atlas
 
 
 class CoronaProduct(Scene):
