@@ -285,6 +285,15 @@
         "documentation": {}
     },
     {
+        "label": "networkx.generators.atlas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "networkx.generators.atlas",
+        "description": "networkx.generators.atlas",
+        "detail": "networkx.generators.atlas",
+        "documentation": {}
+    },
+    {
         "label": "graph_atlas_g",
         "importPath": "networkx.generators.atlas",
         "description": "networkx.generators.atlas",
@@ -2954,12 +2963,12 @@
         "documentation": {}
     },
     {
-        "label": "MobjectPlacement",
+        "label": "CoronaProduct",
         "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class MobjectPlacement(Scene):\n    def construct(self):\n        circle = Circle()\n        square = Square()\n        triangle = Triangle()\n        # place the circle two units left from the origin\n        circle.move_to(LEFT * 2)\n        self.add(circle)\n        self.play(FadeIn(circle))\n        # place the square to the left of the circle",
-        "detail": "test",
+        "importPath": "corona_product",
+        "description": "corona_product",
+        "peekOfCode": "class CoronaProduct(Scene):\n    def construct(self):\n        question_title = Tex(\"What is Corona Product?\")\n        formulaTextTitle = MathTex(r\"G \\odot H\")\n        VGroup(question_title, formulaTextTitle).arrange(DOWN)\n        self.play(\n            Write(question_title),\n            FadeInFrom(formulaTextTitle, UP),\n        )\n        self.wait()",
+        "detail": "corona_product",
         "documentation": {}
     }
 ]
