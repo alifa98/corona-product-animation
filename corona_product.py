@@ -132,6 +132,7 @@ class CoronaProduct(Scene):
 
         self.add(description)
         self.play(Write(description))
+        self.wait()
 
         self.play(corona_product_graph.animate.add_edges(
             *[
@@ -143,7 +144,6 @@ class CoronaProduct(Scene):
             }
         ))
 
-        self.wait()
         self.play(corona_product_graph.animate.add_edges(
             *[
                 (21, 2), (22, 2)
@@ -163,5 +163,28 @@ class CoronaProduct(Scene):
                 (32, 3): {"stroke_color": RED}
             }
         ))
-
+        self.play(FadeOut(description))
         self.wait()
+
+        product_title = VGroup(Text("This is ").scale(0.7), MathTex(r"G \odot H")).arrange(RIGHT).next_to(corona_product_graph, DOWN)
+        self.add(product_title)
+
+        self.play(
+            corona_product_graph.animate.add_edges(
+                *[
+                    (31, 3), (32, 3), (21, 2), (22, 2), (12, 1), (11, 1)
+                ],
+                edge_config={
+                    (31, 3): {"stroke_color": WHITE},
+                    (32, 3): {"stroke_color": WHITE},
+                    (21, 2): {"stroke_color": WHITE},
+                    (22, 2): {"stroke_color": WHITE},
+                    (12, 1): {"stroke_color": WHITE},
+                    (11, 1): {"stroke_color": WHITE}
+                }
+            ),
+
+            FadeInFrom(product_title, UP)
+        )
+
+        self.wait(3)
