@@ -6,4 +6,4 @@ Render:
 manim render corona_product.py CoronaProduct -p -qm
 ```
 
-watch outputin Youtube: https://www.youtube.com/watch?v=4ZaPPZIzXsk
+watch output in Youtube: https://www.youtube.com/watch?v=4ZaPPZIzXsk
